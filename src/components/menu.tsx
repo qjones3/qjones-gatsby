@@ -12,9 +12,11 @@ const Menu: React.FC = () => {
         <NavDropdown.Item as={Link} to='/'>
           First Link
         </NavDropdown.Item>
+        <NavDropdown.Divider />
         <NavDropdown.Item as={Link} to='/'>
           Second Link
         </NavDropdown.Item>
+        <NavDropdown.Divider />
         <NavDropdown.Item as={Link} to='/'>
           Third Link
         </NavDropdown.Item>

@@ -1,4 +1,9 @@
 import type { GatsbyConfig } from "gatsby"
+import dotenv from "dotenv"
+
+dotenv.config({
+  path: `.env.${process.env.NODE_ENV}`
+})
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -13,7 +18,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: 'https://develop-cms-mediacurrent.pantheonsite.io/',
+        baseUrl: process.env.DRUPAL_URL,
         skipFileDownloads: true,
       },
     },
