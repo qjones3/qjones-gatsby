@@ -6,7 +6,7 @@ const Page = ({ data }) => (
 )
 
 export const query = graphql`
-  query($id: String!) {
+  query ($id: String) {
     nodePage (id: {eq: $id}) {
       id
       title

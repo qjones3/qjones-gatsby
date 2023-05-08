@@ -9,7 +9,17 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: process.env.DRUPAL_URL,
+        fastBuilds: true,
+        concurrentAPIRequests: 20,
+        skipFileDownloads: true,
+      },
+    },
+  ],
 }
 
 export default config
